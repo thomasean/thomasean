@@ -18,7 +18,7 @@ function myTag(strings, personExp, ageExp) {
     ageStr = 'youngster';
   }
 
-  console.log( str0 + personExp + str1 + ageStr );
+  return str0 + personExp + str1 + ageStr;
 
 }
 
