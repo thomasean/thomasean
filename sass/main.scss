@@ -24,7 +24,10 @@ ul, li, p {
 	&__item {
 		transition: all .11s cubic-bezier(.2,0,.38,.9);
 		border-top: 1px solid #dcdcdc;
-		overflow: visible;
+		overflow: hidden;
+		&--active {
+			overflow: visible;
+		}
 	}
 
 	&__item:last-child {
@@ -83,10 +86,22 @@ ul, li, p {
 	}
 
 	&__content p {
-		font-family: IBM Plex Sans,Helvetica Neue,Arial,sans-serif;
+		font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
 		font-size: .875rem;
 		font-weight: 400;
 		line-height: 1.25rem;
 		letter-spacing: .16px;
+		padding-left: 1rem;
+		padding-right: 25%;
+	}
+
+	// When Accordion is active
+	&__item--active .bx--accordion__content {
+		padding-bottom: 1.5rem;
+		padding-top: .5rem;
+		height: auto;
+		visibility: visible;
+		opacity: 1;
+		transition: height .11s cubic-bezier(0,0,.38,.9),padding-top .11s cubic-bezier(0,0,.38,.9),padding-bottom .11s cubic-bezier(0,0,.38,.9)
 	}
 }
