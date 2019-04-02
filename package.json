@@ -1,0 +1,26 @@
+{
+  "name": "thomasean",
+  "version": "1.0.0",
+  "description": "My website",
+  "main": "example.js",
+  "dependencies": {
+    "grunt": "^1.0.4",
+    "ruby": "^0.6.1"
+  },
+  "devDependencies": {
+    "grunt-contrib-sass": "^1.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thomasean/thomasean.git"
+  },
+  "author": "Sean Thomas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thomasean/thomasean/issues"
+  },
+  "homepage": "https://github.com/thomasean/thomasean#readme"
+}
