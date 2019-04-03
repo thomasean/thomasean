@@ -1,0 +1,95 @@
+@import '../../globals/scss/vars';
+
+@mixin accordion {
+	.#{$prefix}--accordion {
+		list-style: none;
+		width: 100%;
+	
+		&__item {
+			transition: all .11s cubic-bezier(.2,0,.38,.9);
+			border-top: 1px solid #dcdcdc;
+			overflow: hidden;
+			&--active {
+				overflow: visible;
+			}
+		}
+	
+		&__item:last-child {
+			border-bottom: 1px solid #dcdcdc;
+		}
+	
+		&__heading {
+			background: none;
+			border: none;
+			color: #171717;
+			display: flex;
+			align-items: center;
+			position: relative;
+			width: 100%;
+			justify-content: flex-start;
+			cursor: pointer;
+			padding: .375rem 0;
+			margin: 0;
+			flex-direction: row-reverse;
+			transition: background-color .11s cubic-bezier(.2,0,.38,.9);
+		}
+	
+		&__title {
+			font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+			font-size: .875rem;
+			font-weight: 400;
+			line-height: 1.25rem;
+			letter-spacing: .16px;
+			margin: 0 0 0 1rem;
+			width: 100%;
+			text-align: left;
+			z-index: 0;
+		}
+	
+		&__arrow {
+			outline: 2px solid transparent;
+			outline-offset: -2px;
+			-webkit-flex: 0 0 1rem;
+			flex: 0 0 1rem;
+			width: 1rem;
+			height: 1rem;
+			margin: 0 1rem 0 0;
+			fill: #171717;
+			-webkit-transform: rotate(90deg);
+			transform: rotate(90deg);
+			transition: all .11s cubic-bezier(.2,0,.38,.9);
+		}
+	
+		&__content {
+			transition: height .11s cubic-bezier(.2,0,.38,.9),padding .11s cubic-bezier(.2,0,.38,.9);
+			padding-left: 1rem;
+			padding-right: 25%;
+			height: 0;
+			visibility: hidden;
+			opacity: 0;
+		}
+	
+		&__content p {
+			font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+			font-size: .875rem;
+			font-weight: 400;
+			line-height: 1.25rem;
+			letter-spacing: .16px;
+			padding-left: 1rem;
+			padding-right: 25%;
+		}
+	
+		// When Accordion is active
+		&__item--active .#{$prefix}--accordion__content {
+			padding-bottom: 1.5rem;
+			padding-top: .5rem;
+			height: auto;
+			visibility: visible;
+			opacity: 1;
+			transition: height .11s cubic-bezier(0,0,.38,.9),padding-top .11s cubic-bezier(0,0,.38,.9),padding-bottom .11s cubic-bezier(0,0,.38,.9)
+		}
+		&__item--active .#{$prefix}--accordion__arrow {
+			transform: rotate(-90deg);
+		}
+	}
+}
