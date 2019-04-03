@@ -104,4 +104,7 @@ ul, li, p {
 		opacity: 1;
 		transition: height .11s cubic-bezier(0,0,.38,.9),padding-top .11s cubic-bezier(0,0,.38,.9),padding-bottom .11s cubic-bezier(0,0,.38,.9)
 	}
+	&__item--active .bx--accordion__arrow {
+		transform: rotate(-90deg);
+	}
 }
