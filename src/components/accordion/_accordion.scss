@@ -32,6 +32,7 @@
 			margin: 0;
 			flex-direction: row-reverse;
 			transition: background-color .11s cubic-bezier(.2,0,.38,.9);
+			z-index: 1;
 		}
 	
 		&__title {
@@ -43,7 +44,7 @@
 			margin: 0 0 0 1rem;
 			width: 100%;
 			text-align: left;
-			z-index: 0;
+			z-index: -1;
 		}
 	
 		&__arrow {

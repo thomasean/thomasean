@@ -1,7 +1,10 @@
-const accordions = document.querySelectorAll('.bx--accordion');
+const accordions = document.querySelectorAll("[data-accordion]");
 
 accordions.forEach(function(accordion){
 	accordion.addEventListener('click', function(e) {
-		console.log(e.target);
+		var parNode = e.target.parentNode;
+		if (parNode.className = "got--accordion__item") {
+			parNode.classList.toggle("got--accordion__item--active");
+		}
 	})
 });
